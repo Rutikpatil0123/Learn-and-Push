@@ -1,14 +1,16 @@
-class Phone:
-
-    def __init__(self, ram_capacity, internal_Storage, Screen_Size, price):
-        self.ram_capacity = ram_capacity
-        self.internal_Storage = internal_Storage
-        self.Screen_Size = Screen_Size
-        self.price = price
-
+def count_properties(obj):
+    properties = dir(obj)
+    property_count = len([prop for prop in properties if not prop.startswith("__")])  # Exclude dunder methods
     
+    print(f"Total number of properties in the class: {property_count}")
 
-Samsung = Phone("8", "128", "6.5", "20000")
+# Example usage:
+class MyClass:
+    def __init__(self):
+        self.attribute1 = "value1"
+        self.attribute2 = "value2"
+        self._internal_attribute = "internal"
 
-print(Samsung.__dict__)
+my_object = MyClass()
 
+count_properties(my_object)  # This will print the total number of properties in the MyClass class
