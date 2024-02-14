@@ -6,20 +6,12 @@ class Solution(object):
         :rtype: int
         """
         
-        j = len(nums)-1
-        ans = 0
         i = 0
-        while i <= j:
-            
-            if(nums[i] == val):
+        for j in range(0,len(nums)):
+            if(nums[j] != val):
                 nums[i] = nums[j]
-                nums[j] = val
-                j = j - 1
-            else:
-                i = i + 1 
-            ans = i
-            
-        return ans
+                i = i + 1
                 
+        return i
             
         
