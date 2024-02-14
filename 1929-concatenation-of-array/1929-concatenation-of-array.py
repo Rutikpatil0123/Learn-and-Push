@@ -4,12 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        list = []
+        import copy
+        list = copy.deepcopy(nums)
         for i in range(0,len(nums)):
-            list.insert(i,nums[i])
-            
-        for i in range(0,len(nums)):
-            list.insert(i+len(nums),nums[i])
+            list.append(nums[i])
+
             
         return list
         
