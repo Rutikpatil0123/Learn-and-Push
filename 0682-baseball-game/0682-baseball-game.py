@@ -1,13 +1,5 @@
 class Solution(object):
-    def calculate(list):
-        
-        result = 0
-        
-        for i in list:
-            result = result + i
-            
-        return result
-    
+   
     def calPoints(self, operations):
         """
         :type operations: List[str]
@@ -28,7 +20,7 @@ class Solution(object):
                 
             else:
                 list.append(int(i))
-        print(list)       
+           
         result = 0       
         for i in list:
             result = result + i
